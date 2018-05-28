@@ -1,15 +1,22 @@
 {
-    "name": "ts-maintainability",
+    "name": "ts-complex",
     "version": "1.0.0",
-    "description": "",
+    "description": "Calculates Halstead Matrices, Cyclomatic Complexity and Maintainability for Typescript",
     "main": "lib/main.js",
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1",
-        "start": "lib/main.js"
+        "start": "node lib/main.js"
     },
-    "keywords": [],
-    "author": "",
-    "license": "ISC",
+    "keywords": [
+        "typescript",
+        "maintainability",
+        "cyclomatic complexity",
+        "halstead matrices",
+        "angular"
+    ],
+    "repository": "https://github.com/anandundavia/ts-complex",
+    "author": "Anand Undavia <abundavia@gmail.com>",
+    "license": "MIT",
     "dependencies": {
         "lodash": "^4.17.10",
         "tsutils": "^2.27.1",

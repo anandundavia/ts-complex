@@ -1,11 +1,11 @@
 # ts-complex
-Inspired from 'typhonjs-escomplex', this module helps to find the Halstead Complexity Matrics, Cyclomatic Complexity and Maintainability for typescript.
+Inspired from 'typhonjs-escomplex', this module helps to find the Halstead Complexity Matrices, Cyclomatic Complexity and Maintainability for typescript.
 
 
 ## Features
-* Calculates function wise Halstead Complexity Matrics
-* Calculates function wise Cyclomatic Complexity
-* Calculates file wise Average Maintainablity and Minimum Maintainablity
+* Calculates function wise Halstead Complexity Matrices.
+* Calculates function wise Cyclomatic Complexity.
+* Calculates file wise Average Maintainability and Minimum Maintainability.
 
 
 ## Installing
@@ -23,13 +23,13 @@ const path = './test.ts'; // Finding maintainability of this file
 const maintainability = tscomplex.calculateMaintainability(path);
 console.log(maintainability); // { averageMaintainability: 56.14, minMaintainability: 46.19 }
 ```
-**Halstead Complexity Matrics**
+**Halstead Complexity Matrices**
 ```
 const tscomplex = require('ts-complex');
 
 const path = './test.ts'; // Finding maintainability of this file
 const halstead = tscomplex.calculateHalstead(path);
-console.log(halstead); // object with function name as keys and Halstead Complexity Matrics as value
+console.log(halstead); // object with function name as keys and Halstead Complexity Matrices as value
 ```
 **Cyclomatic Complexity**
 ```
@@ -40,16 +40,21 @@ const complexity = tscomplex.calculateCyclomaticComplexity(path);
 console.log(complexity); // object with function name as keys and cyclomatic complexity as value
 ```
 
-### How the Maintainability is calculated
+### How  is the Maintainability calculated
 The formula to calculate the maintainability for a file is 
-171 - (5.2 * log2(Halstead Volume)) - (0.23 * Cyclomatic Complexity) - (16.2 * log2(sourceCodeLength))
-** Link to source**
+$$
+171 - 5.2\*log_2(HV) - 0.23 \* CC - 16.2 \* log_2(SLoC)
+$$
+Where,
+$$HV = Halstead\ Volume$$
+$$CC = Cyclomatic\ Complexity$$
+$$SLoC = Lines\ of \ Code$$
 
-We calculate Halstead Complexity Matrics and Cyclomatic Complexity for each function in the given file
-And aggregate them by two methods; considering the average and considering the maximum
+We calculate Halstead Complexity Matrices and Cyclomatic Complexity for each function in the given file.
+And aggregate them by two methods; considering the average and considering the maximum.
 
-Thus, average maintainability is calculated using average halstead volume and average cyclomatic complexity
-And minimum maintainability is calculated using maximum halstead volume and maximum cyclomatic complexity 
+Thus, average maintainability is calculated using average halstead volume and average cyclomatic complexity.
+And minimum maintainability is calculated using maximum halstead volume and maximum cyclomatic complexity.
 
 
 ## Contributing
