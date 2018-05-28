@@ -42,13 +42,13 @@ console.log(complexity); // object with function name as keys and cyclomatic com
 
 ### How  is the Maintainability calculated
 The formula to calculate the maintainability for a file is 
-$$
-171 - 5.2\*log_2(HV) - 0.23 \* CC - 16.2 \* log_2(SLoC)
-$$
+
+Maintainability = 171 - 5.2 * log_2(HV) - 0.23 * CC - 16.2 * log_2(SLoC)
+
 Where,
-$$HV = Halstead\ Volume$$
-$$CC = Cyclomatic\ Complexity$$
-$$SLoC = Lines\ of \ Code$$
+HV = Halstead Volume
+CC = Cyclomatic Complexity
+SLoC = Lines of Code
 
 We calculate Halstead Complexity Matrices and Cyclomatic Complexity for each function in the given file.
 And aggregate them by two methods; considering the average and considering the maximum.
